@@ -1,6 +1,8 @@
-package animals;
+package animals.birds;
 
-public class Birds extends Animals {
+import animals.Animals;
+
+public abstract class Birds extends Animals {
     public Birds(String animalName, String typeOfFood) {
         super(animalName, typeOfFood);
     }
@@ -8,12 +10,12 @@ public class Birds extends Animals {
     @Override
     public String moveMethod() {
 
-        return ", летает";
+        return "летает";
     }
 
     @Override
     public String breatheMethod() {
-        return ", дышит легкими";
+        return "дышит легкими";
     }
 
 }

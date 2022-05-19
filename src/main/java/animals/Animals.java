@@ -1,15 +1,15 @@
 package animals;
 
-public class Animals {
+public abstract class Animals {
 
     private String animalName;
     private String typeOfFood;
+
 
     public Animals(String animalName, String typeOfFood) {
         this.animalName = animalName;
         this.typeOfFood = typeOfFood;
     }
-
     public String getAnimalName() {
         return animalName;
     }
@@ -26,21 +26,17 @@ public class Animals {
         this.typeOfFood = typeOfFood;
     }
 
-
-
-
     public String toString() {
-        return animalName + ", тип питания: " + typeOfFood + breatheMethod() + moveMethod();
+        return animalName + ", тип питания: " + typeOfFood + ", тип дыхания: " + breatheMethod() +
+                ", способ передвижения: " + moveMethod() + ", особенность: " + feature();
     }
 
-    public String moveMethod() {
+    public abstract String moveMethod();
 
-        return null;
-    }
+    public abstract String breatheMethod();
 
-    public String breatheMethod() {
-        return null;
-    }
+    public abstract String feature();
+
 
 
 
