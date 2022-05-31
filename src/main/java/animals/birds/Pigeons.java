@@ -1,7 +1,7 @@
 package animals.birds;
 
-public class Pigeon extends Birds{
-    public Pigeon(String animalName, String typeOfFood) {
+public class Pigeons extends Birds{
+    public Pigeons(String animalName, String typeOfFood) {
         super(animalName, typeOfFood);
     }
     @Override

@@ -1,6 +1,5 @@
 package animals.mammals;
 
-
 import animals.Animals;
 
 public abstract class Mammals extends Animals {

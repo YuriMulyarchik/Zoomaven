@@ -1,5 +1,5 @@
 import animals.Animals;
-import animals.birds.Pigeon;
+import animals.birds.Pigeons;
 import animals.birds.Owls;
 import animals.birds.Parrots;
 import animals.fish.Goldenfish;
@@ -11,12 +11,11 @@ import animals.mammals.Lions;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-//test
 
 public class Main {
     public static void main(String[] args) {
 
-        Pigeon pigeon = new Pigeon("Голубь", "всеядный");
+        Pigeons pigeon = new Pigeons("Голубь", "всеядный");
         Parrots parrot = new Parrots("Попугай","всеядный");
         Owls owl = new Owls("Сова","хищник");
 
