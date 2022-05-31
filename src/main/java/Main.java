@@ -1,29 +1,34 @@
 import animals.Animals;
-import animals.Birds;
-import animals.Fish;
-import animals.Mammals;
-
+import animals.birds.Pigeons;
+import animals.birds.Owls;
+import animals.birds.Parrots;
+import animals.fish.Goldenfish;
+import animals.fish.Sharks;
+import animals.fish.Tunas;
+import animals.mammals.Bears;
+import animals.mammals.Elephants;
+import animals.mammals.Lions;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-//test
 
-public class Zoo {
+public class Main {
     public static void main(String[] args) {
 
-        Birds eagle = new Birds("Орел", "хищник");
-        Birds parrot = new Birds("Попугай","травоядный");
-        Birds owl = new Birds("Сова","хищник");
+        Pigeons pigeon = new Pigeons("Голубь", "всеядный");
+        Parrots parrot = new Parrots("Попугай","всеядный");
+        Owls owl = new Owls("Сова","хищник");
 
         ArrayList<Animals> birds = new ArrayList<>();
 
-        birds.add(eagle);
+        birds.add(pigeon);
         birds.add(parrot);
         birds.add(owl);
 
-        Fish goldfish = new Fish("Золотая рыбка", "всеядная");
-        Fish shark = new Fish("Акула", "хищник");
-        Fish tuna = new Fish("Тунец", "хищник");
+
+        Goldenfish goldfish = new Goldenfish("Золотая рыбка", "всеядная");
+        Sharks shark = new Sharks("Акула", "хищник");
+        Tunas tuna = new Tunas("Тунец", "хищник");
 
         ArrayList<Animals> fish = new ArrayList<>();
 
@@ -31,9 +36,10 @@ public class Zoo {
         fish.add(shark);
         fish.add(tuna);
 
-        Mammals elephant = new Mammals("Слон", "травоядный");
-        Mammals lion = new Mammals("Лев", "хищник");
-        Mammals bear = new Mammals("Медведь", "всеядный");
+
+        Bears bear = new Bears("Медведь", "всеядный");
+        Lions lion = new Lions("Лев", "хищник");
+        Elephants elephant = new Elephants("Слон", "травоядный");
 
         ArrayList<Animals> mammals = new ArrayList<>();
 
@@ -103,7 +109,7 @@ public class Zoo {
                                             try {
                                                 switch (scanThree.nextInt()) {
                                                     case 1:
-                                                        System.out.println(eagle);
+                                                        System.out.println(pigeon);
                                                         getMenuThree(birds);
                                                         System.out.println("Для возврата нажмите 0");
                                                         continue;

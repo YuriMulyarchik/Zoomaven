@@ -1,13 +1,29 @@
 package animals;
 
-public class Animals {
+public abstract class Animals {
 
     private String animalName;
     private String typeOfFood;
 
+
     public Animals(String animalName, String typeOfFood) {
-        this.animalName = animalName;
-        this.typeOfFood = typeOfFood;
+        if (animalName == null) {
+            this.animalName = "animalName can't be null, set correct animalName";
+        } else if (animalName == "") {
+            this.animalName = "animalName can't be empty, set correct animalName";
+        } else
+            this.animalName = animalName;
+        if (typeOfFood == null) {
+            this.typeOfFood = "typeOfFood can't be null, set correct typeOfFood";
+        } else if (typeOfFood == "") {
+            this.typeOfFood = "incorrect typeOfFood, set correct animal typeOfFood";
+        } else if (typeOfFood.equals("хищник") || typeOfFood.equals("травоядный") || typeOfFood.equals("всеядный") ||
+                typeOfFood.equals("травоядная") || typeOfFood.equals("всеядная")) {
+            this.typeOfFood = typeOfFood;
+        } else {
+            this.typeOfFood = "incorrect typeOfFood, set correct animal typeOfFood";
+        }
+
     }
 
     public String getAnimalName() {
@@ -15,6 +31,11 @@ public class Animals {
     }
 
     public void setAnimalName(String animalName) {
+        if (animalName == null) {
+            this.animalName ="animalName can't be null, set correct animalName";
+        } else if (animalName == "") {
+            this.animalName = "animalName can't be empty, set correct animalName";
+        } else
         this.animalName = animalName;
     }
 
@@ -23,24 +44,26 @@ public class Animals {
     }
 
     public void setTypeOfFood(String typeOfFood) {
-        this.typeOfFood = typeOfFood;
+        if (typeOfFood.equals("хищник") || typeOfFood.equals("травоядный") || typeOfFood.equals("всеядный") ||
+                typeOfFood.equals("травоядная") || typeOfFood.equals("всеядная")) {
+            this.typeOfFood = typeOfFood;
+        } else  {
+            this.typeOfFood = "incorrect typeOfFood, set correct animal typeOfFood";
+        }//тут не учитываю вариант с null, чтобы сделать exception тест
+
     }
-
-
-
 
     public String toString() {
-        return animalName + ", тип питания: " + typeOfFood + breatheMethod() + moveMethod();
+        return animalName + ", тип питания: " + typeOfFood + ", тип дыхания: " + breatheMethod() +
+                ", способ передвижения: " + moveMethod() + ", особенность: " + feature();
     }
 
-    public String moveMethod() {
+    public abstract String moveMethod();
 
-        return null;
-    }
+    public abstract String breatheMethod();
 
-    public String breatheMethod() {
-        return null;
-    }
+    public abstract String feature();
+
 
 
 
