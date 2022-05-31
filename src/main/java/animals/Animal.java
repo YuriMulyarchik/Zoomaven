@@ -1,12 +1,12 @@
 package animals;
 
-public abstract class Animals {
+public abstract class Animal {
 
     private String animalName;
     private String typeOfFood;
 
 
-    public Animals(String animalName, String typeOfFood) {
+    public Animal(String animalName, String typeOfFood) {
         if (animalName == null) {
             this.animalName = "animalName can't be null, set correct animalName";
         } else if (animalName == "") {
@@ -53,6 +53,7 @@ public abstract class Animals {
 
     }
 
+    @Override
     public String toString() {
         return animalName + ", тип питания: " + typeOfFood + ", тип дыхания: " + breatheMethod() +
                 ", способ передвижения: " + moveMethod() + ", особенность: " + feature();

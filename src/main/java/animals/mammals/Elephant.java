@@ -1,14 +1,15 @@
 package animals.mammals;
 
-import animals.Animals;
+public class Elephant extends Mammal {
 
-public abstract class Mammals extends Animals {
-
-
-    public Mammals(String animalName, String typeOfFood) {
+    public Elephant(String animalName, String typeOfFood) {
         super(animalName, typeOfFood);
     }
 
+    @Override
+        public String feature() {
+            return "ест и пьет с помощью хобота";
+        }
     @Override
     public String moveMethod() {
         return "передвигается по земле";
@@ -18,5 +19,5 @@ public abstract class Mammals extends Animals {
     public String breatheMethod() {
         return "дышит легкими";
     }
+    }
 
-}

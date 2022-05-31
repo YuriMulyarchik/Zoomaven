@@ -1,9 +1,9 @@
-package AnimalsTest;
+package AnimalsTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MammalsTest extends AnimalsTest {
+public class MammalTest extends AnimalTest {
 
 
 

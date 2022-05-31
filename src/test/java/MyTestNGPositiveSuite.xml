@@ -8,10 +8,10 @@
             </run>
         </groups>
         <classes>
-            <class name="AnimalsTest.AnimalsTest" />
-            <class name="AnimalsTest.BirdsTest" />
-            <class name="AnimalsTest.FishTest" />
-            <class name="AnimalsTest.MammalsTest" />
+            <class name="AnimalsTests.AnimalTest" />
+            <class name="AnimalsTests.BirdTest" />
+            <class name="AnimalsTests.FishTest" />
+            <class name="AnimalsTests.MammalTest" />
             <class name="MenusTest.MenusTest" />
         </classes>
     </test>

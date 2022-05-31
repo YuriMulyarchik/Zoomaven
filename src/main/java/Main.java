@@ -1,13 +1,13 @@
-import animals.Animals;
-import animals.birds.Pigeons;
-import animals.birds.Owls;
-import animals.birds.Parrots;
+import animals.Animal;
+import animals.birds.Pigeon;
+import animals.birds.Owl;
+import animals.birds.Parrot;
 import animals.fish.Goldenfish;
-import animals.fish.Sharks;
-import animals.fish.Tunas;
-import animals.mammals.Bears;
-import animals.mammals.Elephants;
-import animals.mammals.Lions;
+import animals.fish.Shark;
+import animals.fish.Tuna;
+import animals.mammals.Bear;
+import animals.mammals.Elephant;
+import animals.mammals.Lion;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -15,11 +15,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Pigeons pigeon = new Pigeons("Голубь", "всеядный");
-        Parrots parrot = new Parrots("Попугай","всеядный");
-        Owls owl = new Owls("Сова","хищник");
+        Pigeon pigeon = new Pigeon("Голубь", "всеядный");
+        Parrot parrot = new Parrot("Попугай","всеядный");
+        Owl owl = new Owl("Сова","хищник");
 
-        ArrayList<Animals> birds = new ArrayList<>();
+        ArrayList<Animal> birds = new ArrayList<>();
 
         birds.add(pigeon);
         birds.add(parrot);
@@ -27,21 +27,21 @@ public class Main {
 
 
         Goldenfish goldfish = new Goldenfish("Золотая рыбка", "всеядная");
-        Sharks shark = new Sharks("Акула", "хищник");
-        Tunas tuna = new Tunas("Тунец", "хищник");
+        Shark shark = new Shark("Акула", "хищник");
+        Tuna tuna = new Tuna("Тунец", "хищник");
 
-        ArrayList<Animals> fish = new ArrayList<>();
+        ArrayList<Animal> fish = new ArrayList<>();
 
         fish.add(goldfish);
         fish.add(shark);
         fish.add(tuna);
 
 
-        Bears bear = new Bears("Медведь", "всеядный");
-        Lions lion = new Lions("Лев", "хищник");
-        Elephants elephant = new Elephants("Слон", "травоядный");
+        Bear bear = new Bear("Медведь", "всеядный");
+        Lion lion = new Lion("Лев", "хищник");
+        Elephant elephant = new Elephant("Слон", "травоядный");
 
-        ArrayList<Animals> mammals = new ArrayList<>();
+        ArrayList<Animal> mammals = new ArrayList<>();
 
         mammals.add(elephant);
         mammals.add(lion);
@@ -215,7 +215,7 @@ public class Main {
         System.out.println("Введите цифру от 1 до 3 или 0 для возврата в предыдущее меню\n1. Млекопитающие\n2. Птицы" +
                 "\n3. Рыбы\n0. Назад");
     }
-    private static void getMenuThree(ArrayList<Animals> animals){
+    private static void getMenuThree(ArrayList<Animal> animals){
 
         for (int i =0; i<animals.size(); i++)
             System.out.println((i + 1) + ". " + animals.get(i).getAnimalName());
