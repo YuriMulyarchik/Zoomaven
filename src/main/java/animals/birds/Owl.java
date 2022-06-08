@@ -8,12 +8,5 @@ public class Owl extends Bird {
     public String feature() {
         return "спит днем";
     }
-    @Override
-    public String moveMethod() {
-        return "летает";
-    }
-    @Override
-    public String breatheMethod() {
-        return "дышит легкими";
-    }
+
 }

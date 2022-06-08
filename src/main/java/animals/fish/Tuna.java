@@ -8,12 +8,5 @@ public class Tuna extends Fish{
     public String feature() {
         return "любят японцы";
     }
-    @Override
-    public String moveMethod() {
-        return "плавает";
-    }
-    @Override
-    public String breatheMethod() {
-        return "дышит жабрами";
-    }
+
 }

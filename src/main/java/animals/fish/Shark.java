@@ -9,12 +9,5 @@ public class Shark extends Fish{
     public String feature() {
         return "не спит";
     }
-    @Override
-    public String moveMethod() {
-        return "плавает";
-    }
-    @Override
-    public String breatheMethod() {
-        return "дышит жабрами";
-    }
+
 }

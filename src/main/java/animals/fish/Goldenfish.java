@@ -8,12 +8,5 @@ public class Goldenfish extends Fish{
     public String feature() {
         return "выполняет желания";
     }
-    @Override
-    public String moveMethod() {
-        return "плавает";
-    }
-    @Override
-    public String breatheMethod() {
-        return "дышит жабрами";
-    }
+
 }

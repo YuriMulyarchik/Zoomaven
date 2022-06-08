@@ -8,14 +8,5 @@ public class Pigeon extends Bird {
     public String feature() {
         return "может приносить почту";
     }
-    @Override
-    public String moveMethod() {
-        return "летает";
-    }
-
-    @Override
-    public String breatheMethod() {
-        return "дышит легкими";
-    }
 
 }

@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="AnimalsTests.AnimalTest" />
+
             <class name="AnimalsTests.BirdTest" />
             <class name="AnimalsTests.FishTest" />
             <class name="AnimalsTests.MammalTest" />

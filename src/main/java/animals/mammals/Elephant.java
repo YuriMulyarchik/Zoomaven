@@ -10,14 +10,6 @@ public class Elephant extends Mammal {
         public String feature() {
             return "ест и пьет с помощью хобота";
         }
-    @Override
-    public String moveMethod() {
-        return "передвигается по земле";
-    }
 
-    @Override
-    public String breatheMethod() {
-        return "дышит легкими";
-    }
     }
 

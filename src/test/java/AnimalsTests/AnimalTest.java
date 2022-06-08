@@ -6,30 +6,6 @@ import org.testng.annotations.Test;
 
 public class AnimalTest {
 
-    @Test(groups = {"positive"}, enabled = false)
-    public void typeOfFoodTest() {
-        System.out.println("тест типа питания");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void animalNameTest() {
-        System.out.println("тест имени");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void moveMethodTest() {
-        System.out.println("тест движения");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void breatheMethodTest() {
-        System.out.println("тест дыхания");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void featureTest() {
-        System.out.println("тест особенности");
-    }
 
     @Test(groups = {"negative"})
     public void animalConstructorWithNullParametersTest() {

@@ -7,4 +7,13 @@ public abstract class Bird extends Animal {
         super(animalName, typeOfFood);
     }
 
+    @Override
+    public String moveMethod() {
+        return "летает";
+    }
+
+    @Override
+    public String breatheMethod() {
+        return "дышит легкими";
+    }
 }

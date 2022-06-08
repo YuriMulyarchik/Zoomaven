@@ -1,19 +1,36 @@
 package AnimalsTests;
 
+import animals.birds.Bird;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class BirdTest extends AnimalTest {
+public class BirdTest {
 
-    @Test(groups = "positive")
+    @Test(groups = {"positive"})
     public void moveMethodTest() {
-        Assert.assertEquals("летает", "летает");
+        Bird testBird = new Bird("testName", "testTypeOfFood") {
+            @Override
+            public String feature() {
+                return null;
+            }
 
+        };
+        Assert.assertEquals(testBird.moveMethod(), "летает", "moveMethod for Bird class - " +
+                testBird.moveMethod() + " is incorrect");
     }
 
-    @Test(groups = "positive")
+    @Test(groups = {"positive"})
     public void breatheMethodTest() {
-        Assert.assertNotEquals("дышит легкими", "");
+        Bird testBird = new Bird("testName", "testTypeOfFood") {
+            @Override
+            public String feature() {
+                return null;
+            }
+
+        };
+
+        Assert.assertEquals(testBird.breatheMethod(), "дышит легкими", "moveMethod for Bird class - " +
+                testBird.breatheMethod() + " is incorrect");
     }
 
 

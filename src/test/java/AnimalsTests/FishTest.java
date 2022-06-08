@@ -1,17 +1,34 @@
 package AnimalsTests;
 
+
+import animals.fish.Fish;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FishTest extends AnimalTest {
-    @Test(groups = "positive")
+public class FishTest {
+    @Test(groups = {"positive"})
     public void moveMethodTest() {
-        Assert.assertEquals("плавает", "плавает");
-
+        Fish testFish = new Fish("testName", "testTypeOfFood") {
+            @Override
+            public String feature() {
+                return null;
+            }
+        };
+        Assert.assertEquals(testFish.moveMethod(), "плавает", "moveMethod for Fish class - " +
+                testFish.moveMethod() + " is incorrect");
     }
 
-    @Test(groups = "positive")
+    @Test(groups = {"positive"})
     public void breatheMethodTest() {
-        Assert.assertNotEquals("дышит жабрами", "");
+        Fish testFish = new Fish("testName", "testTypeOfFood") {
+            @Override
+            public String feature() {
+                return null;
+            }
+        };
+
+        Assert.assertEquals(testFish.breatheMethod(), "дышит жабрами", "moveMethod for Fish class - " +
+                testFish.breatheMethod() + " is incorrect");
     }
+
 }

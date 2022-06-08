@@ -8,6 +8,15 @@ public abstract class Fish extends Animal {
         super(animalName, typeOfFood);
     }
 
+    @Override
+    public String moveMethod() {
+        return "плавает";
+    }
+    @Override
+    public String breatheMethod() {
+        return "дышит жабрами";
+    }
+
 
 }
 
