@@ -1,8 +1,8 @@
 package animals.mammals;
 
-public class Elephants extends Mammals{
+public class Elephant extends Mammal {
 
-    public Elephants(String animalName, String typeOfFood) {
+    public Elephant(String animalName, String typeOfFood) {
         super(animalName, typeOfFood);
     }
 
@@ -10,5 +10,6 @@ public class Elephants extends Mammals{
         public String feature() {
             return "ест и пьет с помощью хобота";
         }
+
     }
 

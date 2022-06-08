@@ -8,4 +8,5 @@ public class Goldenfish extends Fish{
     public String feature() {
         return "выполняет желания";
     }
+
 }

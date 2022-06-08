@@ -1,39 +1,15 @@
-package AnimalsTest;
+package AnimalsTests;
 
-import animals.Animals;
+import animals.Animal;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AnimalsTest {
+public class AnimalTest {
 
-    @Test(groups = {"positive"}, enabled = false)
-    public void typeOfFoodTest() {
-        System.out.println("тест типа питания");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void animalNameTest() {
-        System.out.println("тест имени");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void moveMethodTest() {
-        System.out.println("тест движения");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void breatheMethodTest() {
-        System.out.println("тест дыхания");
-    }
-
-    @Test(groups = {"positive"}, enabled = false)
-    public void featureTest() {
-        System.out.println("тест особенности");
-    }
 
     @Test(groups = {"negative"})
     public void animalConstructorWithNullParametersTest() {
-        Animals testName = new Animals(null,null) {
+        Animal testName = new Animal(null,null) {
 
             @Override
             public String moveMethod() {
@@ -56,7 +32,7 @@ public class AnimalsTest {
 
     @Test(groups = {"negative"})
     public void animalConstructorWithEmptyParametersTest() {
-        Animals testName = new Animals("","") {
+        Animal testName = new Animal("","") {
 
             @Override
             public String moveMethod() {
@@ -79,7 +55,7 @@ public class AnimalsTest {
 
     @Test(groups = {"negative"})
     public void setNullToAnimalNameTest() {
-        Animals testName = new Animals("testName", "") {
+        Animal testName = new Animal("testName", "") {
             @Override
             public String moveMethod() {
                 return null;
@@ -103,7 +79,7 @@ public class AnimalsTest {
 
     @Test(groups = {"negative"})
     public void setEmptyAnimalNameTest() {
-        Animals testName = new Animals("testAnimalName", "") {
+        Animal testName = new Animal("testAnimalName", "") {
             @Override
             public String moveMethod() {
                 return null;
@@ -126,7 +102,7 @@ public class AnimalsTest {
 
     @Test(groups = {"negative"})
     public void setIncorrectTypeOfFoodTest() {
-        Animals testName = new Animals("testAnimalName", "testTypeOfFood") {
+        Animal testName = new Animal("testAnimalName", "testTypeOfFood") {
             @Override
             public String moveMethod() {
                 return null;
@@ -149,7 +125,7 @@ public class AnimalsTest {
 
     @Test(expectedExceptions = NullPointerException.class, groups = {"negative"})
     public void setNullTypeOfFoodTest() {
-        Animals testName = new Animals("testAnimalName", "testTypeOfFood") {
+        Animal testName = new Animal("testAnimalName", "testTypeOfFood") {
             @Override
             public String moveMethod() {
                 return null;
